@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h1>THE TITLE OF YOUR WEBPAGE</h1>
+  <div id="container">
+    <div class="content">This is the glorious text-content!</div>
+  </div>
+  <script>
+    const container = document.querySelector("#container");
+
+// 1. A <p> with red text
+const redPara = document.createElement("p");
+redPara.classList.add("content");
+redPara.textContent = "Hey I'm red!";
+redPara.style.color = "red";
+container.appendChild(redPara);
+
+// 2. An <h3> with blue text
+const header3 = document.createElement("h3");
+header3.textContent = "I'm a blue h3!";
+header3.style.color = "blue";
+container.appendChild(header3);
+
+// 3. The pink <div> container
+const divvy = document.createElement("div");
+divvy.style.border = "1px solid black";
+divvy.style.backgroundColor = "pink";
+
+// Create the elements INSIDE the pink div
+const header1 = document.createElement("h1");
+header1.textContent = "I'm in a div";
+
+const para1 = document.createElement("p"); // Changed from "p1"
+para1.textContent = "ME TOO!";
+
+// Append children to the pink div FIRST (Following the hint)
+divvy.appendChild(header1);
+divvy.appendChild(para1);
+
+// FINALLY, add the pink div to the main container
+container.appendChild(divvy);
+  </script>
+</body>
+</html>
+
