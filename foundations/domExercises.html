@@ -4,8 +4,21 @@
   <h1>THE TITLE OF YOUR WEBPAGE</h1>
   <div id="container">
     <div class="content">This is the glorious text-content!</div>
+    <!-- <button onclick="alert('Hello World')">Click Me</button> -->
+    <button id="btn">CLICK ME BABY</button>
   </div>
   <script>
+    
+  function alertFunction() {
+    alert("YAY! YOU DID IT!");
+    }
+    const btn = document.querySelector("#btn");
+    btn.addEventListener("click", alertFunction);
+
+    btn.addEventListener("click", function (e) {
+  e.target.style.background = "blue";
+});
+
     const container = document.querySelector("#container");
 
 // 1. A <p> with red text
@@ -39,6 +52,8 @@ divvy.appendChild(para1);
 
 // FINALLY, add the pink div to the main container
 container.appendChild(divvy);
+
+
   </script>
 </body>
 </html>
